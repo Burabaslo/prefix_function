@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style_kmp.css" />
+</head>
+
+<body>
+    <br />
+    <p class="header">KMP Algorithm</p>
+    <div id="enter">
+    <p>
+      <label >Enter string:</label>
+      <input type="text" id="text_input" name="text_input">
+      <label id="next_ent">Pattern to find in string:</label>
+      <input type="text" id="pattern" name="pattern">
+    </p>
+    <p id="button_block">
+          <button onclick="kmp();">Let's go</button>
+          <button class="btn" onclick="restart_all();">Clear</button>
+    </p>
+  </div>
+
+    <div id="array">
+      <pre id="code">
+                  Pseudocode:
+
+        int[] KMP(string P, string S) {
+          int p_len = P.length();
+          int s_len = S.length();
+          int[] ans(s_len);
+          int[] prefix = prefix_function(P + '#' + S);
+          for (int i = 0; i < s_len; i++) {
+              if prefix[p_len + i + 1] == p_plen;
+                  ans[i - p_len + 1] = 1;
+          }
+          return ans;
+        }
+
+      </pre>
+    </div>
+    <script src="script_kmp.js"></script>
+</body>
+
+</html>
